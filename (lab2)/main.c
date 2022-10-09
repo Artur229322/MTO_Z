@@ -9,10 +9,12 @@ int my_printf(char *format_string, char *param){
 	for(int i=0;i<strlen(format_string);i++){
 		if((format_string[i] == '#') && (format_string[i+1] == 'k')){
 				for(int j=0;j<strlen(format_string);j++){
-					if(isupper(format_string[j])>0){
-						format_string[j] = tolower(format_string[j]);
-					}else
-						format_string[j] = toupper(format_string[j]);
+					if(isalpha(format_string[j])!=0){
+						if(isupper(format_string[j])>0){
+							format_string[j] = tolower(format_string[j]);
+						}else
+							format_string[j] = toupper(format_string[j]);
+					}
 				}
 			i++;
 			printf("%s",param);
