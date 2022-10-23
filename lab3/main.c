@@ -3,8 +3,12 @@
 #include <ctype.h>
 
 
+
+
 int my_printf(char *format_string, char *param){
 	int format_string_length = strlen(format_string);
+
+	
 
 	for(int i=0;i<format_string_length;i++){
 		if((format_string[i] == '#') && (format_string[i+1] == 'k')){
@@ -18,14 +22,31 @@ int my_printf(char *format_string, char *param){
 				}
 			i++;
 			printf("%s",param);
-		}else
+		}else{
 			putchar(format_string[i]);
-
+		}
+		if((format_string[i]=='#') && (isdigit(format_string[i+1]))!=0 && (format_string[i+2]=='k')){
+			int digit = (int)(format_string[i+1]);
+			int flag=0;
+			for (int j = i+3; j < format_string_length; j++)
+			{
+				flag++;
+				if(flag==digit){
+					break;
+				}
+				putchar(format_string[j]);
+			}
+			break;
+		}
+		
 	}
-
 	puts("");
 	return 0;	
-}		
+
+}
+
+	
+	
 	
 	
 
