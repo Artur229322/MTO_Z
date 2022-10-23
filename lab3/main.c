@@ -22,22 +22,25 @@ int my_printf(char *format_string, char *param){
 				}
 			i++;
 			printf("%s",param);
+		}else if((format_string[i]=='#') && (isdigit(format_string[i+1]))!=0 && (format_string[i+2]=='k')){
+			int digit = (int)(format_string[i+1]);
+			int j=i+3;
+			for(int j=i+3;j<format_string;j++){
+				putchar(format_string[j]);
+				digit--;
+				if(digit=='0'){
+					break;
+				}
+			}
+				
+				
+			
+			break;
 		}else{
 			putchar(format_string[i]);
 		}
-		if((format_string[i]=='#') && (isdigit(format_string[i+1]))!=0 && (format_string[i+2]=='k')){
-			int digit = (int)(format_string[i+1]);
-			int flag=0;
-			for (int j = i+3; j < format_string_length; j++)
-			{
-				flag++;
-				if(flag==digit){
-					break;
-				}
-				putchar(format_string[j]);
-			}
-			break;
-		}
+			
+		
 		
 	}
 	puts("");
