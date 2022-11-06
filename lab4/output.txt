@@ -2,9 +2,9 @@ totafsdfsf test fdsfsdf
 totafsdtest2 fdsfsdf fdfjs
 jfldjfldk # wynik
 fjdfsfds # g alal
-djfjkldsjf test5 4321 1234 fsfjdljfdlsj flj ldfj
+djfjkldsjf test5 4321
 gjjkdsljflds test6 123kfjdslf
-fjdslkfjdl test7 9873
-fjdlsjfkl test8 123.4
-rwrewrew test9 123455
+fjdslkfjdl test7 3789
+fjdlsjfkl test8 123.4 asd
+rwrewrew test9 5231
 fjdlskjfldjflj test10 rewrewrew
