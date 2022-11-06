@@ -7,6 +7,8 @@ def print_digits(format_string,index):
     for i in range (index+3,len(format_string)):
         if format_string[i].isdigit():
             buffer += format_string[i]
+        elif format_string[i]!=" ":
+            return "",index
         else:
             return buffer[::-1],i   
     return "",index
@@ -22,6 +24,7 @@ def my_printf(format_string,param):
                 if(buffer!=""):
                     print(" "+buffer,end="")
                 shouldDo=False
+                
             else:
                 print(format_string[idx],end="")
         else:
