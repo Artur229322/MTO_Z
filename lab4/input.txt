@@ -10,9 +10,9 @@ djfjkldsjf #g 1234 fsfjdljfdlsj flj ldfj
 test5
 gjjkdsljflds #g 123kfjdslf
 test6
-fjdslkfjdl #g 9873 asd
+fjdslkfjdl #g 9873
 test7
-fjdlsjfkl #g 123.4 asd
+fjdlsjfkl #g 123.4 asdas
 test8
 rwrewrew #g 1325 ee
 test9

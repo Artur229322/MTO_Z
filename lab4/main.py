@@ -7,16 +7,16 @@ def print_digits(format_string,index):
     for i in range (index,len(format_string)):
         if format_string[i].isdigit():
             buffer += format_string[i]
-        elif format_string[i]!=" ":
-            return ""
+        elif format_string[i]=="" or format_string[i]==" ":
+            return buffer[::-1]
         else:
-            return buffer[::-1]   
-    return ""
+            return ""   
+    return buffer[::-1] 
 
 def my_printf(format_string,param):
+    
     #print(format_string)
     shouldDo=True
-    buffer=""
     for idx in range(0,len(format_string)):
         if shouldDo:
             if format_string[idx] == '#' and format_string[idx+1]=='g':
@@ -24,12 +24,10 @@ def my_printf(format_string,param):
                 buffer=print_digits(format_string,idx+3)
                 if(buffer!=""):
                     print(" "+buffer,end="")
-                shouldDo=False     
+                shouldDo=False
             else:
-                if (buffer==""):
-                    print(format_string[idx],end="")
+                        print(format_string[idx],end="")
         else:
-            buffer==""
             shouldDo=True
     print("")
 
