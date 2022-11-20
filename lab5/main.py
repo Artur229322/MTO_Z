@@ -27,21 +27,23 @@ def my_printf(format_string,param):
                     else:
                         print(subtract(format_string[idx],'1'),end="")
             else:
-                print(format_string[idx],end="") 
-            if format_string[idx]=='x' and format_string[idx+1].isdigit() and format_string[idx+2]=='g':
+                print(format_string[idx],end="")
+
+            if format_string[idx]=='#' and format_string[idx+1].isdigit() and format_string[idx+2]=='g':
                 print(param,end="")
                 shouldDo=False
                 paramInUse=True
                 counter = format_string[idx+1]
             elif paramInUse:
                 if(counter==0):
-                    pass
+                    break;
                 else:
-                    if(format_string[idx]=='0'):
-                        print('9',end="")
-                    else:
-                        print(subtract(format_string[idx],'-1'),end="")
-                    counter = counter-1
+                    if(format_string[idx].isdigit()):
+                        if(format_string[idx]=='0'):
+                            print('9',end="")
+                        else:
+                            print(subtract(format_string[idx],'-1'),end="")
+                        counter = int(counter)-1
         else:
             shouldDo=True
 
