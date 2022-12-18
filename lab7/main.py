@@ -28,13 +28,15 @@ def changeAlphabetLetters(hexString):
             "4":"j",
             "5":"k",
             "6":"l"}
-        
-    for i in range(0,len(hexString)):
-        if(hexString[i] in dict1.values()):
-            hexString[i] = dict2.get(hexString[i])
-        elif (hexString[i] in dict2.values()):
-            hexString[i] = dict1.get(hexString[i])
-    
+    for hexS in hexString:    
+        for i in range(0,len(hexS)):
+            if(hexS[i] in dict1.values()):
+                #hexS.replace(hexS[i], dict2[dict1[hexS[i]]])
+                pass
+            elif (hexS[i] in dict2.values()):
+                pass
+                #hexS[i] = dict1.get(hexS[i])
+
     return hexString
 
 
