@@ -2,11 +2,16 @@
 
 import sys
 
-def hexify(format_string):
+def hexify(format_string,):
     hexString = []
     
-    for i in range(0,len(format_string)):
-        hexString.append(hex(format_string[i]))
+    
+    for i in format_string:
+        if(i==" "):
+            pass
+        else:
+            hexString.append(hex(int(i.capitalize(),base=16)))
+    return hexString
         
 def changeAlphabetLetters(hexString):    
     dict1 = {
@@ -30,7 +35,7 @@ def changeAlphabetLetters(hexString):
         elif (hexString[i] in dict2.values()):
             hexString[i] = dict1.get(hexString[i])
     
-    
+    return hexString
 
 
 def my_printf(format_string,param):
@@ -40,7 +45,10 @@ def my_printf(format_string,param):
         if shouldDo:
             if format_string[idx] == '#' and format_string[idx+1] == 'j':
                 print(param,end="")
+                printString = changeAlphabetLetters(hexify(format_string[idx+2:]))
+                print(" "+''.join(printString),end="")
                 shouldDo=False
+                break
             else:
                 print(format_string[idx],end="")
         else:

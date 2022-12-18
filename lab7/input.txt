@@ -1,4 +1,4 @@
-totafsdfsf #j fdsfsdf
+totafsdfsf #j ABC
 test
 totafsd#k fdsfsdf fdfjs
 test2
@@ -6,15 +6,15 @@ jfldjfldk # wynik
 test3
 fjdfsfds # j alal
 test4
-djfjkldsjf #j jjjjjj fsfjdljfdlsj flj ldfj
+djfjkldsjf #j ABAD AAA BCD
 test5
-gjjkdsljflds #j jdlkfjdslf
+gjjkdsljflds #j abc
 test6
-fjdslkfjdl #j tttttt
+fjdslkfjdl #j de
 test7
-fjdlsjfkl #j oooolll
+fjdlsjfkl #j ABba
 test8
-rwrewrew #j fjdslkjfdl
+rwrewrew #j FFFff
 test9
-fjdlskjfldjflj #j rewrewrew
+fjdlskjfldjflj #j eeeeee
 test10
