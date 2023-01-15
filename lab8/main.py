@@ -3,15 +3,18 @@
 import sys
 
 def hexify(format_string,):
-    hexString = []
-    
+    stringToHex = ""
     
     for i in format_string:
         if(i==" "):
             pass
-        else:
-            hexString.append(hex(int(i.capitalize(),base=16)))
-    return hexString
+        elif(i.isdigit()):
+            stringToHex += i
+    try:
+        stringToHex = hex(int(stringToHex,base=16))
+    except ValueError:
+        stringToHex = "0"
+    return stringToHex
         
 def changeAlphabetLetters(hexString):    
     dict1 = {
@@ -45,10 +48,14 @@ def my_printf(format_string,param):
     shouldDo=True
     for idx in range(0,len(format_string)):
         if shouldDo:
-            if format_string[idx] == '#' and format_string[idx+1] == 'j':
+            if  format_string[idx] == '#' and format_string[idx+1] == 'j':
                 print(param,end="")
-                printString = changeAlphabetLetters(hexify(format_string[idx+2:]))
-                print(" "+''.join(printString),end="")
+                hexString = hexify(format_string[idx+2:])
+                if(hexString == "0"):
+                    pass
+                else:
+                    printString = changeAlphabetLetters(hexString)
+                    print(" "+''.join(printString),end="")
                 shouldDo=False
                 break
             else:
